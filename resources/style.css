@@ -1,0 +1,130 @@
+:root {
+    --main-white: hsl(0, 0%, 100%);
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/*Main section*/
+body {
+    padding: 2rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.938rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    gap: 2rem;
+}
+
+/*Main box*/
+.container {
+    display: flex;
+    max-width: 50rem;
+}
+
+/*3 columns in container box*/
+.sedans, .suvs, .luxury {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/*Adjust 3 columns in container box*/
+.sedans {
+    background-color: var(--bright-orange);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0px 10px 10px 0px;
+}
+
+/*Adjust images*/
+.sedan-img, .suvs-img, .luxury-img {
+    width: 25%;
+}
+
+/*Adjust elements*/
+h1 {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: var(--main-white);
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(--transparent-white);
+}
+
+/*Adjust 3 buttons in 3 sections*/
+.button {
+    width: 65%;
+    padding: 0.4rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+    background-color: var(--very-light-gray);
+    font-weight: 500;
+}
+
+.sedanbtn {
+    color: var(--bright-orange);
+    border: 2px solid var(--bright-orange);
+}
+
+.suvbtn {
+    color: var(--dark-cyan);
+    border: 2px solid var(--dark-cyan);
+}
+
+.luxurybtn {
+    color: var(--very-dark-cyan);
+    border: 2px solid var(--very-dark-cyan);
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--main-white);
+    border: 2px solid var(--main-white);
+}
+
+/*Footer*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*Media queries*/
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button {
+        padding: 0.8rem;
+        margin-top: 0;
+    }
+
+    .sedans {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .luxury {
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
