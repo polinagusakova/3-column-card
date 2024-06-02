@@ -57,9 +57,10 @@ body {
 }
 
 /*Adjust elements*/
-h1 {
+h2 {
     font-family: "Big Shoulders Display", sans-serif;
     color: var(--main-white);
+    font-size: 2rem;
 }
 
 p {
